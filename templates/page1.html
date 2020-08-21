@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+    <form action="add" method="POST">
+      {% csrf_token %}
+      <label for="text">Number1</label>
+      <input type="text" name="num1" />
+      <label for="text">Number2</label>
+      <input type="text" name="num2" />
+      <button type="submit">Add numbers</button>
+    </form>
+  </body>
+</html>

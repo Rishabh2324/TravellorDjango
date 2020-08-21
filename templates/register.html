@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Travello | Registration</title>
+  </head>
+  <style></style>
+  <body>
+    <header><h1>Travello Registration</h1></header>
+    <main>
+      <form action="register" method="POST">
+          {% csrf_token %}
+        <input placeholder="First Name" type="text" name="first_name" />
+        <input placeholder="Last Name" type="text" name="last_name" />
+        <input placeholder="User Name" type="text" name="username" />
+        <input placeholder="Email" type="text" name="email" />
+        <input placeholder="Password" type="password" name="password1" />
+        <input
+          placeholder="Confirm Password"
+          type="password"
+          name="password2"
+        />
+        <input type="submit">
+      </form>
+    </main>
+    <section>
+        {%for message in messages%}    
+        {{messages}}
+        {%endfor%}
+    </section>
+    <footer></footer>
+  </body>
+</html>
